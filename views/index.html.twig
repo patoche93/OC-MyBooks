@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% for author in authors %}
+<author>
+    <h2><a class="authorTitle" href="{{ path('author', { 'id': author.id }) }}">{{ author.title }}</a></h2>
+    <p>{{ author.content }}</p>
+</author>
+{% endfor %}
+{% endblock %}
